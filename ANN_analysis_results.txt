@@ -1,0 +1,31 @@
+ANN 教學實作報告
+執行日期：2026-11-23
+
+=== 第一部分：一筆資料的前向/反向傳播 ===
+         Stage Probability BinaryCrossEntropy
+ Before update   0.5382949          0.6193487
+  After update   0.5568785          0.5854082
+
+=== 第二部分：二元分類 ===
+                   Accuracy Sensitivity Specificity    AUC LogLoss
+Linear_Logistic      0.6778      0.0000      1.0000 0.5232  0.6281
+Quadratic_Logistic   0.8111      0.6034      0.9098 0.8604  0.4338
+ANN                  0.7972      0.5603      0.9098 0.8469  0.4651
+
+ANN Confusion Matrix:
+        Predicted
+Observed   0   1
+       0 222  22
+       1  51  65
+ANN convergence (0 means optimizer's convergence criterion met): 0
+
+=== 第三部分：連續型迴歸 ===
+                    RMSE    MAE Test_R2
+Linear_Regression 1.1362 0.8919  0.0328
+Basis_Regression  0.2655 0.2077  0.9472
+ANN               0.2663 0.2096  0.9469
+
+ANN regression convergence (0 means optimizer's convergence criterion met): 0
+
+執行套件 nnet 版本：7.3.19
+輸出資料夾：C:/Users/USER/Documents/ANN_R_Results
